@@ -20,6 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.spring.mvc.dataTransfer.dto.MemberDto;
 
 @Controller 	// @Controller를 작성하여 해당 클래스가 컨트롤러임을 스프링 bean에 등록한다.
+@RequestMapping("/controllerToView") // 중복되는 경로는 클래스 위에 작성하여 중복경로를 줄일 수 있다.
 public class ControllerToView {
 
 	/*
@@ -138,13 +139,15 @@ public class ControllerToView {
 	 */
 	
 	@RequestMapping(value="/responseBodyEx" , method=RequestMethod.GET )
-	public @ResponseBody String responseBodyEx() {
+	public @ResponseBody String responseBodyEx(HttpServletRequest request) {
 		
 		//String data = "<h1> BoardMain </h1>";
 		
+		// HttpServletRequest request > request.getContextPath();메서드를 통하여 절대경로 접근 경로를 가져온다.
+									
 		String data = "<script>";
 			   data += "alert('로그인 되었습니다.');";
-			   data += "location.href='modelEx';";
+			   data += "location.href='" + request.getContextPath() + "/controllerToView/modelEx';";
 			   data += "</script>";
 		
 		return data;
@@ -206,13 +209,13 @@ public class ControllerToView {
 class RestControllerEx {
 	
 	@RequestMapping(value="/restControllerEx" , method=RequestMethod.GET )
-	public String restControllerEx() {
+	public String restControllerEx(HttpServletRequest request) {
 		
 		//String data = "<h1> BoardMain </h1>";
 		
 		String data = "<script>";
 			   data += "alert('success login');";
-			   data += "location.href='modelEx';";
+			   data += "location.href='"+ request.getContextPath() + "/controllerToView/modelEx';";
 			   data += "</script>";
 		
 		return data;
@@ -220,3 +223,6 @@ class RestControllerEx {
 	}	
 	
 }
+
+
+

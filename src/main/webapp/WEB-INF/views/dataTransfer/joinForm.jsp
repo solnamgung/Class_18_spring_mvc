@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,7 @@
 </head>
 <body>
 
-	<form action="transfer4" method="post"> 
+	<form action="${contextPath}/viewToController/transfer2" method="post"> 
 		<input type="hidden" name="url1" value="transfer1">
 		<input type="hidden" name="url2" value="transfer2">
 		<input type="hidden" name="url3" value="transfer3">
@@ -30,8 +32,8 @@
 		</fieldset>	
      </form>
      
-    <p>이미 회원가입이 되어있으면 <a href="transfer5?isMember=yes&isSession=no">로그인(param)으로 이동하기</a></p>
-    <p>이미 회원가입이 되어있으면 <a href="transfer6/yes/no">로그인(path variable)으로 이동하기</a></p>
+    <p>이미 회원가입이 되어있으면 <a href="${contextPath}/viewToController/transfer5?isMember=yes&isSession=no">로그인(param)으로 이동하기</a></p>
+    <p>이미 회원가입이 되어있으면 <a href="${contextPath}/viewToController/transfer6/yes/no">로그인(path variable)으로 이동하기</a></p>
 
 </body>
 </html>

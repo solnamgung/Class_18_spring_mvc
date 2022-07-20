@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.spring.mvc.dataTransfer.dao.DataTransferDao;
 
 @Controller
+@RequestMapping("/mapperToDao")
 public class MapperToDao {
 
 	//private DataTransferDao dataTransferDaoTemp = new DataTransferDao();

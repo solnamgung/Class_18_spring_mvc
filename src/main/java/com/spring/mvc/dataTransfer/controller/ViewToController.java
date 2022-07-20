@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.spring.mvc.dataTransfer.dto.MemberDto;
 
 @Controller
+@RequestMapping("/viewToController")
 public class ViewToController {
 
 	@RequestMapping(value="/join" , method=RequestMethod.GET)
@@ -21,14 +22,6 @@ public class ViewToController {
 		return "dataTransfer/joinForm";
 	}
 	
-	/* 
-	 * 	
-	 * 	예시 1) HttpServletRequest
-	 * 
-	 *  - HttpServletRequest를 직접 이용하여 getParameter메서드를 이용하여 파라메타의 값에 접근 할 수 있다.
-	 *  - JSP HttpServletRequest과 사용방법이 같다.
-	 * 
-	 */
 	
 	@RequestMapping(value="/transfer1" , method=RequestMethod.POST)
 	public String transfer1(HttpServletRequest request) {
