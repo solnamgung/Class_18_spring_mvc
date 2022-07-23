@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form action="${contextPath}/viewToController/transfer2" method="post"> 
+	<form action="${contextPath}/viewToController/transfer4" method="post"> 
 		<input type="hidden" name="url1" value="transfer1">
 		<input type="hidden" name="url2" value="transfer2">
 		<input type="hidden" name="url3" value="transfer3">

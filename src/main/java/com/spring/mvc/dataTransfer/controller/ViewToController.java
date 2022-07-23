@@ -41,6 +41,21 @@ public class ViewToController {
 		
 		return "home";
 		
+		
+//		transfer1 
+//
+//		memberId : xx
+//		memberName : xx
+//		memberGender : F
+//		hp : xxxx
+//		email : xx@d.c
+//		residence : ssss
+//		url1 : transfer1
+//		url2 : transfer2
+//		url3 : transfer3
+//		url4 : transfer4
+//		url5 : transfer5
+	
 	}
 	
 	
@@ -68,6 +83,7 @@ public class ViewToController {
 		
 		System.out.println("\n transfer2 \n");
 		System.out.println(memberDto);
+		//MemberDto [memberId=qqq, memberName=qqqq, memberGender=M, hp=qq, email=q@f.s, residence=qqq]
 		
 		return "home";
 	}
@@ -96,6 +112,11 @@ public class ViewToController {
 		
 		return "home";
 		
+//		transfer3 
+//
+//		{url1=transfer1, url2=transfer2, url3=transfer3, url4=transfer4, 
+//		url5=transfer5, memberId=sol, memberName=aol, memberGender=F, 
+//		hp=01029375, email=d@d.c, residence=dd}
 	}
 	
 	
@@ -116,10 +137,10 @@ public class ViewToController {
 	 */
 	
 	@RequestMapping(value="/transfer4" , method=RequestMethod.POST)
-	public String transfer4(@RequestParam(name="memberName", defaultValue="anonymous") String memberName , 
-							@RequestParam(name="residence" , defaultValue="서울") String residence) {
+//	public String transfer4(@RequestParam(name="memberName", defaultValue="anonymous") String memberName , 
+//							@RequestParam(name="residence" , defaultValue="서울") String residence) {
 
-		//	public String transfer4(String memberName , String residence) {
+    public String transfer4(String memberName , String residence) {
 		
 		System.out.println("\n transfer4 \n");
 		System.out.println("memberName : " + memberName);
@@ -127,6 +148,16 @@ public class ViewToController {
 		
 		return "home";
 		
+//		transfer4 
+//
+//		memberName : hin
+//		residence : 서울
+		
+//		 transfer4 
+//
+//		 memberName : word
+//		 residence : 
+
 	}
 	
 	
@@ -155,6 +186,11 @@ public class ViewToController {
 		
 		return "home";
 		
+//		 transfer5 
+//
+//		 isMember : yes
+//		 isSession : no
+
 	}
 	
 	@RequestMapping(value="/transfer6/{isMember}/{isSession}" , method=RequestMethod.GET)
@@ -166,6 +202,12 @@ public class ViewToController {
 		System.out.println("isSession : " + isSession);
 		
 		return "home";
+		
+//		 transfer6 
+//
+//		 isMember : yes
+//		 isSession : no
+
 		
 	}
 	

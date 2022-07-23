@@ -39,7 +39,8 @@
 	
 	<form action="ifEx" method="get">
 		<p>
-			if Ex : <select name="searchKeyword">
+			if Ex : 
+			<select name="searchKeyword">
 				<option value="all">전체</option>
 				<option value="memberId">회원아이디</option>
 				<option value="memberName">회원이름</option>
@@ -55,7 +56,8 @@
 	
 	<form action="chooseEx01" method="get">
 		<p>
-			chooseEx01 Ex : <select name="searchKeyword">
+			chooseEx01 Ex : 
+			<select name="searchKeyword">
 				<option value="all">전체</option>
 				<option value="memberId">회원아이디</option>
 				<option value="memberName">회원이름</option>
@@ -71,8 +73,8 @@
 	<form action="chooseEx02" method="get">
 		<p>	
 			chooseEx02 : 완료된 배송 <input type="radio" name="deliveryState" value="배송완료">&emsp;
-			미완료된 배송 <input type="radio" name="deliveryState" value="미완료">&emsp;
-			<input type="submit" value="검색">
+			미완료된 배송			 <input type="radio" name="deliveryState" value="미완료">&emsp;
+								 <input type="submit" value="검색">
 		</p>
 	</form>
 	
