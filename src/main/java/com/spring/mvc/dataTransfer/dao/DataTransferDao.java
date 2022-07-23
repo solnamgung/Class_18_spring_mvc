@@ -90,6 +90,8 @@ public class DataTransferDao {
 	public void memberInfo(String memberId) {
 		MemberDto memberDto = sqlSession.selectOne("dataTransfer.memberInfo" , memberId);
 		System.out.println(memberDto);
+		//MemberDto [memberId=user7, memberName=스티븐워즈니악, 
+		//memberGender=m, hp=010-7777-7777, email=stevenw@gmail.com, residence=경기]
 	}
 	
 	// 예시 2) DTO 전송
@@ -104,6 +106,13 @@ public class DataTransferDao {
 		List<OrderDto> orderList = sqlSession.selectList("dataTransfer.searchData1" , orderMap);
 		for (OrderDto orderDto : orderList) {
 			System.out.println(orderDto);
+			
+//OrderDto [orderCode=order4, memberId=user5, productCode=product8, orderGoodsQty=2, deliveryMessage=배송전 연락 주세요., deliveryState=배송중, orderDate=Thu Apr 11 09:00:00 KST 2019]
+//OrderDto [orderCode=order5, memberId=user6, productCode=product2, orderGoodsQty=2, deliveryMessage=배송전 연락 주세요., deliveryState=배송준비중, orderDate=Thu May 30 09:00:00 KST 2019]
+//OrderDto [orderCode=order6, memberId=user3, productCode=product1, orderGoodsQty=1, deliveryMessage=배송전 연락 주세요., deliveryState=배송준비중, orderDate=Sat Jun 01 09:00:00 KST 2019]
+//OrderDto [orderCode=order7, memberId=user2, productCode=product2, orderGoodsQty=2, deliveryMessage=배송전 연락 주세요., deliveryState=배송준비중, orderDate=Fri Jul 12 09:00:00 KST 2019]
+//OrderDto [orderCode=order9, memberId=user9, productCode=product2, orderGoodsQty=2, deliveryMessage=문 앞에 놓고 벨 눌러주세요., deliveryState=배송중, orderDate=Tue Jan 07 09:00:00 KST 2020]
+
 		}
 		
 	}
@@ -125,6 +134,8 @@ public class DataTransferDao {
 		int sumOrderGoodsQty = sqlSession.selectOne("dataTransfer.searchData3" , orderMap);
 		System.out.println(sumOrderGoodsQty);
 		
+		// searchData3 
+			//49
 	}
 	
 }

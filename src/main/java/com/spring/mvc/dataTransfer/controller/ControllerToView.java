@@ -84,7 +84,7 @@ public class ControllerToView {
 		}
 		
 		// setViewName메서드 대신 생성자의 인수로 jsp 파일경로를 작성할 수 있다.
-		//ModelAndView mav = new ModelAndView("dataTransfer/memberList");
+		//ModelAndView mv = new ModelAndView("dataTransfer/memberList");
 		
 		ModelAndView mv = new ModelAndView();      // ModelAndView객체를 생성한다.
 		mv.setViewName("dataTransfer/memberList"); // 포워딩할 jsp파일 경로를 작성한다.

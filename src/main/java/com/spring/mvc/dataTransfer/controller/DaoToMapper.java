@@ -32,7 +32,7 @@ public class DaoToMapper {
 	public String addProduct() {
 		
 		ProductDto productDto = new ProductDto();
-		productDto.setProductCode("newProduct3");
+		productDto.setProductCode("newProduct300");
 		productDto.setProductName("신상품3");
 		productDto.setProductPrice(300000);
 		productDto.setProductDeliveryPrice(0);
